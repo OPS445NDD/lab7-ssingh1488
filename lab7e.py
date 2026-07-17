@@ -9,6 +9,13 @@ class Time:
         self.hour = hour
         self.minute = minute
         self.second = second
+    def __str__(self):
+        """Return a printable string representation."""
+        return f'{self.hour:02d}:{self.minute:02d}:{self.second:02d}'
+
+    def __repr__(self):
+        """Return an interactive-shell representation."""
+        return f'{self.hour:02d}.{self.minute:02d}.{self.second:02d}'
 
     def format_time(self):
         """Return the Time object as a formatted string."""
